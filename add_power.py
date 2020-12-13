@@ -1,14 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
-'''
-Author: John
-Email: johnjim0816@gmail.com
-Date: 2020-12-10 20:02:03
-LastEditor: John
-LastEditTime: 2020-12-13 11:47:24
-Discription: 
-Environment: 
-'''
+
+
 import pandas as pd 
 CSV_FILE_PATH = 'data/Pokedex_Ver6.csv'
 

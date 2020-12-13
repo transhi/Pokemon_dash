@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
-'''
-Author: John
-Email: johnjim0816@gmail.com
-Date: 2020-12-11 13:18:16
-LastEditor: John
-LastEditTime: 2020-12-13 20:40:50
-Discription: 
-Environment: 
-'''
-# https://github.com/STATWORX/blog
-# https://www.statworx.com/en/blog/how-to-build-a-dashboard-in-python-plotly-dash-step-by-step-tutorial/
+
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
