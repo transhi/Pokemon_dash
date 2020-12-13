@@ -5,7 +5,7 @@ Author: John
 Email: johnjim0816@gmail.com
 Date: 2020-12-11 13:18:16
 LastEditor: John
-LastEditTime: 2020-12-13 19:44:40
+LastEditTime: 2020-12-13 19:55:28
 Discription: 
 Environment: 
 '''
@@ -23,7 +23,7 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 
 # Load data
-df = pd.read_csv('https://github.com/transhi/Pokemon_dash/blob/master/data/Pokedex_Ver6_with_power.csv', parse_dates=True)
+df = pd.read_csv('https://raw.githubusercontent.com/transhi/Pokemon_dash/master/data/Pokedex_Ver6_with_power.csv')
 type1_list = df['TYPE1'].unique().tolist()
 tmps = df['TYPE2'].unique()
 type2_list = [tmp for tmp in tmps if str(tmp) != 'nan']  # remove nan
@@ -36,7 +36,7 @@ feature_list = ['HP', 'ATK', 'DEF', 'SP_ATK', 'SP_DEF', 'SPD']
 
 # Initialize the app
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-external_stylesheets = ['https://github.com/transhi/Pokemon_dash/blob/master/assets/style.css']
+external_stylesheets = ['https://raw.githubusercontent.com/transhi/Pokemon_dash/master/assets/style.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.config.suppress_callback_exceptions = True
 
