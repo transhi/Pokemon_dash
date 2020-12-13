@@ -13,7 +13,7 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 
 # Load data
-df = pd.read_csv('./data/Pokedex_Ver6.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/transhi/Pokemon_dash/master/data/Pokedex_Ver6_with_power.csv')
 type1_list = df['TYPE1'].unique().tolist()
 tmps = df['TYPE2'].unique()
 type2_list = [tmp for tmp in tmps if str(tmp) != 'nan']  # remove nan
@@ -26,8 +26,9 @@ feature_list = ['HP', 'ATK', 'DEF', 'SP_ATK', 'SP_DEF', 'SPD']
 
 # Initialize the app
 
-external_stylesheets = ['./assets/style.css']
+external_stylesheets = ['https://github.com/transhi/Pokemon_dash/blob/master/assets/style.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server # must have!
 app.config.suppress_callback_exceptions = True
 
 
