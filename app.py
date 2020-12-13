@@ -5,7 +5,7 @@ Author: John
 Email: johnjim0816@gmail.com
 Date: 2020-12-11 13:18:16
 LastEditor: John
-LastEditTime: 2020-12-13 19:41:51
+LastEditTime: 2020-12-13 19:44:40
 Discription: 
 Environment: 
 '''
@@ -23,7 +23,7 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 
 # Load data
-df = pd.read_csv('./data/Pokedex_Ver6_with_power.csv', parse_dates=True)
+df = pd.read_csv('https://github.com/transhi/Pokemon_dash/blob/master/data/Pokedex_Ver6_with_power.csv', parse_dates=True)
 type1_list = df['TYPE1'].unique().tolist()
 tmps = df['TYPE2'].unique()
 type2_list = [tmp for tmp in tmps if str(tmp) != 'nan']  # remove nan
