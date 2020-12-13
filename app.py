@@ -140,19 +140,9 @@ def update(selected_value1,selected_value2):
         df_sub = df_sub1.append(df_sub2)
         df_sub_dict = df_sub1.append(df_sub2).to_dict('records')
     if selected_value2:
-        figure = px.histogram(df_sub, x=selected_value2, title='Maximum Values of Feature '+selected_value2)
+        figure = px.histogram(df_sub, x=selected_value2, title='Number Distribution of Feature '+selected_value2)
     else:
-        figure = px.histogram(df_sub, x='HP', title='Number Distributions of Feature HP')
-    
-    # figure={
-    #         'data': [
-    #             {'x': ['HP','ATK','DEF','SP_ATK','SP_DEF','SPD'], 'y': max_values, 'type': 'bar', 'name': 'Max'},
-    #             {'x': ['HP','ATK','DEF','SP_ATK','SP_DEF','SPD'], 'y': min_values,'type': 'bar', 'name': 'Min'},
-    #         ],
-    #         'layout': {
-    #             'title': 'Maximum Values of Features'
-    #         }
-    #     }
+        figure = px.histogram(df_sub, x='HP', title='Number Distribution of Feature HP')
     return df_sub_dict, figure
 
 
