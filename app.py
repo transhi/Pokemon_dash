@@ -5,7 +5,7 @@ Author: John
 Email: johnjim0816@gmail.com
 Date: 2020-12-11 13:18:16
 LastEditor: John
-LastEditTime: 2020-12-13 19:55:28
+LastEditTime: 2020-12-13 19:59:50
 Discription: 
 Environment: 
 '''
@@ -24,6 +24,7 @@ import plotly.express as px
 
 # Load data
 df = pd.read_csv('https://raw.githubusercontent.com/transhi/Pokemon_dash/master/data/Pokedex_Ver6_with_power.csv')
+
 type1_list = df['TYPE1'].unique().tolist()
 tmps = df['TYPE2'].unique()
 type2_list = [tmp for tmp in tmps if str(tmp) != 'nan']  # remove nan
